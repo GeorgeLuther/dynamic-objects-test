@@ -1,12 +1,15 @@
 // Class and its functions
-function myClass() {
-    this.existingProperty = 5 
-}
-myClass.prototype.myFunction = function () {
-    this.resultProperty = this.newProperty + this.existingProperty
-}
-myClass.prototype.myFunction2 = function () {
-    this.resultProperty = this.newProperty * this.existingProperty
+class myClass {
+    constructor() {
+        this.existingProperty = 5
+        this.newProperty = null
+    }
+    sum() {
+        this.resultProperty = this.newProperty + this.existingProperty
+    }
+    multiply() {
+        this.resultProperty = this.newProperty * this.existingProperty
+    }
 }
 
 // Memory
