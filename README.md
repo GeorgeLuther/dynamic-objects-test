@@ -1,5 +1,4 @@
 # dynamic-objects-test
-dynamic-objects-test
 
 A simple example created to explore ideal approaches to packaging rhythms and pattern functions.
 
