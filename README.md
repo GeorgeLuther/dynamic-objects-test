@@ -1,6 +1,6 @@
 # dynamic-objects-test
 
-A simple example created to explore ideal approaches to packaging rhythms and pattern functions.
+A simple example created to explore ideal approaches for packaging rhythms and pattern functions.
 
 - In rhythmodulum 0.3 rhythms were called patterns. This was more confusing because a rhythm and pattern were not well differentiated. In rhythmodulum 0.4 patterns should refer to the functions used to create rhythms and rhythms will refer to instantiated rhythm objects.
 - In rhythmodulum 0.3 patterns were objects pushed into an array of patterns. The name and other attributes of a rhythmic pattern existed as properties of that index of the pattern array. (see functions.js > makePatterns)
