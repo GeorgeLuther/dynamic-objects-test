@@ -11,3 +11,7 @@ IN SHORT using arrays to associate the browser elements, the pattern objects, an
 With the current dynamic-objects-test I have a class called myClass which represents the rhyhtm object class. myClass has two prototypical functions to represent pattern generation and manipulation functions. You can create a new object instance of the myClass class by entering a name in the name <input> and clicking the add new object button. 
 
 The goal was to create and get objects, set properties, and call functions as directly as possible BY NAME rather than BY INDEX from the browser for simplicity and clarity.
+The main takeaways are 
+- using a local object or using the global window to store the object instances of a class: const locoParentis = {}
+- therefor allowing us to use the name <input> text value to name an object/variable: locoParentis\[nameField\] = new myClass()
+- using square brackets again to use the value of the <select> dropdown to call functions: locoParentis\[nameField\]\[e.target.value\]()
