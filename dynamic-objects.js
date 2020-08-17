@@ -1,8 +1,17 @@
 // Class and its functions
-class myClass {
-    constructor() {
-        this.existingProperty = 5
+class MyClass {
+    constructor(existingProperty, myFunc) {
+        this.existingProperty = existingProperty
         this.newProperty = null
+        this._myFunc = myFunc
+        this[myFunc]()
+    }
+    get myFunc() {
+        return this._myFunc
+    }
+    set myFunc(newFunc) {
+        this._myFunc = newFunc
+        this[newFunc]()
     }
     sum() {
         this.resultProperty = this.newProperty + this.existingProperty
@@ -17,13 +26,13 @@ const locoParentis = {}
 let nameField = ''
 let propField = 0
 
-// Name of object instance of myClass (for example: type dogs into the brower/HTML "name" input)
+// Name of new/accessed object instance of myClass (for example: type dogs into the brower/HTML "name" input)
 document.querySelector('#name').addEventListener('change', (e)=>{
     nameField = e.target.value
 })
-// Add the new objeect instance to the array (for example: click add new object to create an object called dogs with an existingProperty of 5)
+// Add the new object instance to the array (for example: click add new object to create an object called dogs with an existingProperty of 5)
 document.querySelector('#new').addEventListener('click', ()=>{
-    locoParentis[nameField] = new myClass()
+    locoParentis[nameField] = new MyClass()
     console.log(locoParentis)
 })
 // Create/set new property in object instance (for example: typing 9 in the property value input sets dogs' newProperty to 9)
