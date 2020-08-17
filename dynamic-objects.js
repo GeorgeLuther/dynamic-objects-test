@@ -1,3 +1,9 @@
+//This idea might be dumb and redundant but I can't tell right now.
+// You can call a function on initialization of an object instance and later get the name of the function used.
+// You can call a function directly and later get the name of the function used.
+// You can call a function by changing the string name of the function property and later get the name of the function used.
+
+
 // Class and its functions
 class MyClass {
     constructor(existingProperty, myFunc) {
@@ -15,9 +21,11 @@ class MyClass {
     }
     sum() {
         this.resultProperty = this.newProperty + this.existingProperty
+        this.myFunc = 'sum'
     }
     multiply() {
         this.resultProperty = this.newProperty * this.existingProperty
+        this.myFunc = 'multiply'
     }
 }
 
